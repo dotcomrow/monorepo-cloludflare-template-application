@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Layout from "./components/Layout";
 import "./style.scss";
 import { PersistGate } from "redux-persist/integration/react";
-import store, { persistor } from "common/store";
+import store, { persistor } from "./common/store/store";
 import { Provider } from "react-redux";
 import { GlobalStore } from 'redux-micro-frontend';
 

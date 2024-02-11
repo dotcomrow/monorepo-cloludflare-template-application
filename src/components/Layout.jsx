@@ -12,12 +12,11 @@ import Header from "./globalnav/layout/header/header";
 import Footer from "./globalnav/layout/footer/footer";
 import { BaseStyles } from "dtk/BaseStyles";
 import ProfileComponent from '../mfe/profile/ProfileComponent';
-import HomeComponent from 'home/HomeComponent';
 import { displayError } from '../common/utilities/functions';
 import { LOADER_KEY } from "../common/utilities/constants";
 import { WifiLoader } from "react-awesome-loaders-py3";
 import { useDispatch } from 'react-redux';
-import { loginUser } from "../common/store/userSlice";
+import { loginUser } from "../common/store/slices/userSlice";
 import { useSelector, getDarkMode } from "react-redux";
 import { H2 } from "dtk/Typography";
 

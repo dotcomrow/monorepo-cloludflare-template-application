@@ -11,9 +11,7 @@ import SessionTimeout from './modals/SessionTimeout';
 import Header from "./globalnav/layout/header/header";
 import Footer from "./globalnav/layout/footer/footer";
 import { BaseStyles } from "dtk/BaseStyles";
-import ProfileComponent from 'profile/ProfileComponent';
-import BatchConfigComponent from 'batchconfig/BatchConfigComponent';
-import Editor from 'engine/Editor';
+import ProfileComponent from '../mfe/profile/ProfileComponent';
 import HomeComponent from 'home/HomeComponent';
 import { displayError } from 'common/functions';
 import { LOADER_KEY } from "common/constants";
@@ -121,15 +119,6 @@ const Main = function Layout() {
                             <Routes>
                                 <Route path="profile" element={
                                     <ProfileComponent />
-                                }></Route>
-                                <Route path="batchconfig" element={
-                                    <BatchConfigComponent />
-                                }></Route>
-                                <Route path="home" element={
-                                    <HomeComponent />
-                                }></Route>
-                                <Route path="engine" element={
-                                    <Editor />
                                 }></Route>
                                 <Route
                                     path="*"

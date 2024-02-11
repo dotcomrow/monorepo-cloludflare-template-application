@@ -35,13 +35,6 @@ const prodConfig = {
             exposes: {},
             remotes: {
                 dtk: 'storybook@https://dtk.suncoast.systems/remoteEntry.js',
-                
-                
-                config: 'admin@https://config.suncoast.systems/remoteEntry.js',
-                profile: 'profile@https://profile.suncoast.systems/remoteEntry.js',
-                common: 'common@https://commonjs.suncoast.systems/remoteEntry.js',
-                
-                
             },
             shared: {
                 ...packageJson.dependencies,

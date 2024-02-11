@@ -77,3 +77,9 @@ variable "registry_name" {
   type        = string
   nullable = false
 }
+
+variable "user_profile_svc_endpoint" {
+  description = "user profile svc url"
+  type        = string
+  nullable = false
+}

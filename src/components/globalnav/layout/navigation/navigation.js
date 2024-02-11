@@ -14,11 +14,6 @@ const Navigation = () => {
       url: "/home",
       group: "*",
     },
-    {
-      name: "Batch",
-      url: "/batchconfig",
-      group: PAID_USERS_GROUP,
-    },
   ];
 
   const [NAV_LIST, setNavList] = useState([]);

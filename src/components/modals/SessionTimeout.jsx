@@ -1,9 +1,9 @@
 import Modal from 'dtk/Modal';
 import { ErrorBoundary } from 'react-error-boundary';
 import React, { useState, useEffect, useRef } from 'react';
-import { displayError } from 'common/functions';
+import { displayError } from '../../common/utilities/functions';
 import { useSelector } from "react-redux";
-import { logout, getDarkMode } from "common/userSlice";
+import { logout, getDarkMode } from "../../common/store/userSlice";
 
 const TimeoutModal = ({ vars }) => {
 

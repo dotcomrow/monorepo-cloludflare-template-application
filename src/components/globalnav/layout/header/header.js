@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../navigation/navigation";
 import Popover from "dtk/Popover";
 import { useState } from "react";
-import { logout, getDarkMode } from "common/userSlice";
+import { logout, getDarkMode } from "../../../../common/store/userSlice";
 import { useSelector } from "react-redux";
 import { H1, H2, H3, Subtitle, Overline } from "dtk/Typography";
 

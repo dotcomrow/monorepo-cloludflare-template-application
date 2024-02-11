@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ErrorBoundary } from "react-error-boundary";
-import { displayError } from 'common/functions';
-import { updatePreference, getDarkMode } from 'common/userSlice';
+import { displayError } from '../../common/utilities/functions';
+import { updatePreference, getDarkMode } from '../../common/store/userSlice';
 import Card from 'dtk/Card';
 import { H3, H2, Subtitle } from 'dtk/Typography';
 import { Tabs, Tab } from 'dtk/Tabs';

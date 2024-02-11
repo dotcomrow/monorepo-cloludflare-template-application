@@ -8,23 +8,7 @@ on:
 permissions: write-all
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'dist' folder
-        run: |
-          npm --prefix ./src/services/* install
-          npm --prefix ./src/services/* run build
-
   terraform:
-    needs: build
     name: "Terraform"
     runs-on: ubuntu-latest
 
@@ -56,6 +40,21 @@ jobs:
         with:
           scheme: calver
           increment: patch
+
+      - name: Build
+        run: |
+          cd release
+          npm --prefix ./src/services/* install
+          npm --prefix ./src/services/* run build
+
+      - name: Commit
+        run: |
+          cd release
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git add .
+          git commit -m "Release ${{ steps.version.outputs.version }}"
+          git push
 
       - name: Create release
         uses: "actions/github-script@v6"

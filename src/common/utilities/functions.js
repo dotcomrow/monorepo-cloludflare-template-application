@@ -1,16 +1,5 @@
 import React from "react";
 
-export const newAbortSignal = function (timeoutMs) {
-  const abortController = new AbortController();
-  setTimeout(() => abortController.abort(), timeoutMs || 0);
-  return abortController.signal;
-};
-
-export const addSeconds = (date, seconds) => {
-  date.setSeconds(date.getSeconds() + seconds);
-  return date;
-};
-
 export const displayError = ({ detail, error }) => {
   return (
     <div className="col-12 pt-5 pb-5">

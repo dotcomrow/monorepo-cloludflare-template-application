@@ -1,4 +1,4 @@
-name: Build Services
+name: Build and Deploy Services
 
 on:
   push:
@@ -86,7 +86,7 @@ jobs:
       - uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.1.1
         id: upload
         with:
-              workspace: ${{ env.TFE_WORKSPACE }}
+              workspace: ${{ vars.TFE_WORKSPACE }}
               directory: release
 
       - name: Create Apply Run

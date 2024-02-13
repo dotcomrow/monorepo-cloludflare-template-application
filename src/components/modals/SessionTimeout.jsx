@@ -3,7 +3,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import React, { useState, useEffect, useRef } from 'react';
 import { displayError } from '../../common/utilities/functions';
 import { useSelector } from "react-redux";
-import { logout, getDarkMode } from "../../common/store/slices/userSlice";
+import { logout, getDarkMode } from "../../common/store/slices/user/userSlice";
 
 const TimeoutModal = ({ vars }) => {
 

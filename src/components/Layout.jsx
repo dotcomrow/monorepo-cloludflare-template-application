@@ -16,7 +16,7 @@ import { displayError } from '../common/utilities/functions';
 import { LOADER_KEY } from "../common/utilities/constants";
 import { WifiLoader } from "react-awesome-loaders-py3";
 import { useDispatch } from 'react-redux';
-import { loginUser, getDarkMode } from "../common/store/slices/userSlice";
+import { loginUser, getDarkMode } from "../common/store/slices/user/userSlice";
 import { useSelector } from "react-redux";
 import { H2 } from "dtk/Typography";
 

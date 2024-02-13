@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { STATE } from "../../utilities/constants";
+import { STATE } from "../../../utilities/constants";
 
 let preferencesUrl = "https://user-prefs.suncoast.systems";
 let googleAuthUrl = "https://accounts.google.com/o/oauth2/v2/auth";

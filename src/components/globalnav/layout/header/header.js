@@ -5,7 +5,7 @@ import Popover from "dtk/Popover";
 import { useState } from "react";
 import { logout, getDarkMode } from "../../../../common/store/slices/user/userSlice";
 import { useSelector } from "react-redux";
-import { H1, H2, H3, Subtitle, Overline } from "dtk/Typography";
+import { Overline } from "dtk/Typography";
 
 function MyImageComponent() {
   const [active, setActive] = useState(false);

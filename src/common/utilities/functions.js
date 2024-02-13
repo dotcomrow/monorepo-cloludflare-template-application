@@ -11,7 +11,6 @@ export const displayError = ({ detail, error }) => {
               We are working hard to fix it....please come back again a bit
               later
             </p>
-            <p>Sorry about this....we miss you already!</p>
             <p>Exception: {error.message}</p>
             <p>{detail ? "Detail: " + detail : ""}</p>
             <p>

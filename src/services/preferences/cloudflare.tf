@@ -17,10 +17,10 @@ resource "cloudflare_worker_route" "user_prefs_route" {
   script_name = cloudflare_worker_script.user_prefs.name
 }
 
-resource "cloudflare_workers_kv_namespace" "mapping" {
-  account_id = var.cloudflare_account_id
-  title      = "${local.project_name}_mapping"
-}
+# resource "cloudflare_workers_kv_namespace" "mapping" {
+#   account_id = var.cloudflare_account_id
+#   title      = "${local.project_name}_mapping"
+# }
 
 resource "cloudflare_worker_script" "user_prefs" {
   account_id = var.cloudflare_account_id

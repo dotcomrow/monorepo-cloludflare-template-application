@@ -14,7 +14,7 @@ provider "google-beta" {
 # }
 
 module "user-preferences-svc" {
-  source  = "./src/services/preferences"
+  source  = "../src/services/preferences"
   cloudflare_account_id = "${var.cloudflare_account_id}"
   cloudflare_worker_hostname = "user-prefs.${var.domain}"
   cloudflare_worker_url_pattern = "user-prefs.${var.domain}/*"

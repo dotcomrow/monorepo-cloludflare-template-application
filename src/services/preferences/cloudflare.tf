@@ -29,10 +29,10 @@ resource "cloudflare_worker_script" "user_prefs" {
   compatibility_date = "2023-08-28"
   module = true
 
-    kv_namespace_binding {
-        name         = "MAPPING"
-        namespace_id = cloudflare_workers_kv_namespace.mapping.id
-    }
+    # kv_namespace_binding {
+    #     name         = "MAPPING"
+    #     namespace_id = cloudflare_workers_kv_namespace.mapping.id
+    # }
 
     plain_text_binding {
         name          =  "CORS_DOMAINS"

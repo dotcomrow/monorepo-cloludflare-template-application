@@ -34,6 +34,7 @@ jobs:
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'dist' folder
         run: |
+            cd public
             npm install
             npm run build
 

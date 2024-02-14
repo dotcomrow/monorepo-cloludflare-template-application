@@ -14,7 +14,7 @@ provider "google-beta" {
 # }
 
 module "app" {
-  source  = "../public/src"
+  source  = "../public"
   cloudflare_account_id = "${var.cloudflare_account_id}"
   cloudflare_zone_id = "${var.cloudflare_zone_id}"
 }

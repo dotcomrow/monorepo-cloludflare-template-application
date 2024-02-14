@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-        - "src/services/**"
+        - "services/**"
 
 permissions: write-all
 
@@ -49,8 +49,8 @@ jobs:
       - name: Build
         run: |
           cd release
-          npm --prefix ./src/services/* install
-          npm --prefix ./src/services/* run build
+          npm --prefix ./services/* install
+          npm --prefix ./services/* run build
 
       - name: Commit
         run: |

@@ -1,11 +1,3 @@
-
-# module "mfe" {
-#   source  = "app.terraform.io/dotcomrow/mfe/cloudflare"
-#   version = "> 1.0.0"
-#   cloudflare_account_id = "${var.cloudflare_account_id}"
-#   cloudflare_zone_id = "${var.cloudflare_zone_id}"
-# }
-
 module "app" {
   source  = "../public"
   cloudflare_account_id = "${var.cloudflare_account_id}"

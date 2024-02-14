@@ -111,7 +111,7 @@ function ProfileComponent({ vars }) {
                     <div className="align-items-end col">
                         <H2 darkMode={darkMode}>{user.name}</H2>
                         <Subtitle darkMode={darkMode}>{user.email}</Subtitle>
-                        <Subtitle darkMode={darkMode}>Last Logged In: 11/12/2023</Subtitle>
+                        <Subtitle darkMode={darkMode}>Last Logged In: 2/13/2024</Subtitle>
                     </div>
                 </div>
             </div>

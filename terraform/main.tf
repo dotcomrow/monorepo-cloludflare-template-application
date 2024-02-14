@@ -13,6 +13,12 @@ provider "google-beta" {
 #   cloudflare_zone_id = "${var.cloudflare_zone_id}"
 # }
 
+module "app" {
+  source  = "./src/"
+  cloudflare_account_id = "${var.cloudflare_account_id}"
+  cloudflare_zone_id = "${var.cloudflare_zone_id}"
+}
+
 module "user-preferences-svc" {
   source  = "../src/services/preferences"
   cloudflare_account_id = "${var.cloudflare_account_id}"
@@ -22,3 +28,4 @@ module "user-preferences-svc" {
   cloudflare_cors_domains = ".*.${var.domain},.*localhost.*"
   user_profile_svc_url = "${var.user_profile_svc_endpoint}"
 }
+

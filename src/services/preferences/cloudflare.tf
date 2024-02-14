@@ -50,9 +50,9 @@ resource "cloudflare_worker_script" "user_prefs" {
     }
 }
 
-output "api_gateway_namespace_id" {
-  value = cloudflare_workers_kv_namespace.mapping.id
-}
+# output "api_gateway_namespace_id" {
+#   value = cloudflare_workers_kv_namespace.mapping.id
+# }
 
 resource "cloudflare_d1_database" "user_prefs_db" {
   account_id = var.cloudflare_account_id

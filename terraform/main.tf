@@ -1,8 +1,3 @@
-module "app" {
-  source  = "../public"
-  cloudflare_account_id = "${var.cloudflare_account_id}"
-  cloudflare_zone_id = "${var.cloudflare_zone_id}"
-}
 
 module "user-preferences-svc" {
   source  = "../services/preferences"

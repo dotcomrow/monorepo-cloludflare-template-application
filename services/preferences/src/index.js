@@ -1,16 +1,17 @@
 import { handleRequest } from "./handlerEntry.js";
+import { serializeError } from "serialize-error";
 
 export default {
   async fetch(request, env, context) {
     try {
       return await handleRequest(request, env, context);
     } catch (e) {
-      var resp = {
-        message: "Error -> " + e,
-        stack: e.stack,
-      };
-      return new Response(JSON.stringify(resp), {
+      const responseError = serializeError(e);
+      return new Response(JSON.stringify(responseError), {
         status: 500,
+        headers: {
+          "Content-Type": "application/json",
+        },
       });
     }
   }

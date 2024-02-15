@@ -28,7 +28,7 @@ export async function handleGet(env, account_id, id_token) {
     .select()
     .from(user_preferences)
     .where(eq(user_preferences.account_id, account_id))
-    .run();
+    .all();
   if (res.results.length == 0) {
     await db
       .insert(user_preferences)
@@ -37,12 +37,12 @@ export async function handleGet(env, account_id, id_token) {
         preferences: {},
         last_update_datetime: new Date(),
       })
-      .run();
+      .all();
     var res = await db
       .select()
       .from(user_preferences)
       .where(eq(user_preferences.account_id, account_id))
-      .run();
+      .all();
     returnObject["preferences"] = res.results[0];
     returnObject["account_id"] = res.results[0]["account_id"];
     return returnObject;
@@ -72,7 +72,7 @@ export async function handlePut(env, account_id, new_preference) {
         last_update_datetime: new Date(),
       })
       .where(eq(user_preferences.account_id, account_id))
-      .run();
+      .all();
     return handleGet(env, account_id);
   }
 }

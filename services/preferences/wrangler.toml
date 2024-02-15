@@ -1,10 +1,6 @@
 name = "preferences-service"
 type = "webpack"
 
-account_id = ""
-zone_id = ""
-route = ""
-
 workers_dev = false
 webpack_config = "webpack.config.js"
 compatibility_date = "2023-08-28"

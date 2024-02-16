@@ -23,6 +23,7 @@ export async function handleGet(env, account_id, id_token) {
     returnObject["groups"] = backendRespJson["groups"];
   }
 
+  const db = drizzle(env.user_prefs_database);
   var res = await env.user_prefs_database.prepare(
     "select * from user_preferences where account_id = ?"
   )

@@ -23,13 +23,11 @@ export async function handleGet(env, account_id, id_token) {
     returnObject["groups"] = backendRespJson["groups"];
   }
 
-  const db = drizzle(env.user_prefs_database);
-  var res = await db
-    .select()
-    .from(user_preferences)
-    .where(eq(user_preferences.account_id, account_id))
+  var res = await env.user_prefs_database.prepare(
+    "select * from user_preferences where account_id = ?"
+  )
+    .bind(account_id)
     .all();
-    console.log(res);
   if (res.results.length == 0) {
     await db
       .insert(user_preferences)
@@ -38,12 +36,12 @@ export async function handleGet(env, account_id, id_token) {
         preferences: {},
         last_update_datetime: new Date(),
       })
-      .all();
-    var res = await db
-      .select()
-      .from(user_preferences)
-      .where(eq(user_preferences.account_id, account_id))
-      .all();
+      .run();
+      var res = await env.user_prefs_database.prepare(
+        "select * from user_preferences where account_id = ?"
+      )
+        .bind(account_id)
+        .all();
     returnObject["preferences"] = res.results[0];
     returnObject["account_id"] = res.results[0]["account_id"];
     return returnObject;

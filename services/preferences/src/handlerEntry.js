@@ -100,7 +100,7 @@ export async function handleRequest(request, env, context) {
   var accountResponse = JSON.parse(await response.text());
   if (accountResponse == undefined || accountResponse["id"] == undefined) {
     return new Response(
-      JSON.stringify({ message: "Account not found or token invalid." }),
+      JSON.stringify({ message: "Account not found / token invalid." }),
       {
         status: 403,
         headers: {

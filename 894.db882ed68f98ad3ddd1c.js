@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkapp_container=self.webpackChunkapp_container||[]).push([[894],{3894:(t,n,e)=>{function r(t){return function(n){var e=n.dispatch,r=n.getState;return function(n){return function(u){return"function"==typeof u?u(e,r,t):n(u)}}}}e.r(n),e.d(n,{default:()=>a});var u=r();u.withExtraArgument=r;const a=u}}]);

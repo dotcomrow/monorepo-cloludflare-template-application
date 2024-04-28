@@ -27,7 +27,7 @@ resource "cloudflare_pages_project" "app" {
     type = "github"
     config {
       owner                         = "dotcomrow"
-      repo_name                     = "monorepo-cloludflare-template-application"
+      repo_name                     = "${local.project_name}"
       production_branch             = "gh-pages"
       pr_comments_enabled           = true
       deployments_enabled           = true
